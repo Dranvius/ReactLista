@@ -1,0 +1,23 @@
+Primero ir a vitejs.dev
+
+FUNCIONA CREAR PROYECTOS
+-Necesita que todos los archivos sean .jsx
+
+INICIAR LA DESCARGA DE LA LIBRERIA
+(Comando para crear un proyecto con vite)
+-npm create vite
+Instala paquete
+Escoger react
+Dar nombre al proyecto 
+cd al nombre proeycto
+npm run dev
+
+-------------------
+
+Comando especiales de de visual para ejecutar más rapido códgo:
+ul>li*3>a
+de esta forma podemos poner codigo dentro de algo y hasta multiplicarlo con el *
+div>ul>li*2>h1
+
+rfce crear un componente exportable con el nombre del archivo 
+imp para poner todo exportar
