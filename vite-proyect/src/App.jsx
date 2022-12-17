@@ -1,20 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState, useEffect } from "react";
+import reactLogo from "./assets/react.svg";
+import "./App.css";
+import { task } from "./Task";
+
+//!Crear una lista de tareas
 
 function App() {
-  return(
-    <div>
-      <h1>Hola mundo</h1>
-      <ul>
-        <li><a href="">Hola</a></li>
-        <li><a href="">Napy</a></li>
-        <li><a href="">Chanchito feliz</a></li>
-      </ul>
-    </div>
-  )
+  const [variable, setVariable] = useState([]);
 
+  useEffect(() => {
+    setVariable(task);
+  }, [])
 
+  console.log(variable.length);
+
+  if (variable.length === 0) {
+    return <h1>No hay tareas</h1>
+  }else{
+
+    return (
+      <div id="ImHere">
+        {task.map((tarea, i) => {
+          <div key={i}>
+            console.log(tarea.title)
+            <h1>{tarea.title}</h1>
+            <h6>{tarea.description}</h6>
+          </div>;
+        })}
+      </div>
+    );
+  }
+
+  
 }
 
-export default App
+export default App;
