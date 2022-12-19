@@ -1,25 +1,25 @@
-import { useState, useEffect } from "react";
-
-import { task as data, task } from "./Task";
 
 //!Crear una lista de tareas
+  //*Esta Funcionando
 
-console.log(data);
 
-export function Tarea() {
-  const [tasks, setTasks] = useState([]);
+export function Tarea({tasks}) {
+  
 
-    useEffect(()=>{
-        setTasks(data)
-    },[])
+    /*
+    Cuidado con el uso de los arraies con react
+    Tener presente esto () {}
+    */
 
-    if(tasks === 0){
-        return <h1>No hay tareas</h1>
-    }
+  
+    if (tasks.length === 0) {
+      return <h1>No hay tareas</h1>;
+    } else
+
 
   return (
     <div>
-      {data.map((task,i) => ( 
+      {tasks.map((task,i) => ( 
         <div key={i}>
             <u><h1>{task.title}</h1></u>
             <h2>{task.description}</h2>
