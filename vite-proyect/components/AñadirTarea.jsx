@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { Context } from "../context/ProyectoContext";
+
 export function AñadirTarea({ funcion, lista }) {
   return (
     <form
